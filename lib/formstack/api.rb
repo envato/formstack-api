@@ -160,7 +160,7 @@ module Formstack
         arguments["search_value_#{idx}"] = search_fields_values[idx]
       end
 
-      response = request(end_point, 'GET', { body: arguments })
+      response = request(end_point, 'GET', arguments)
       response['submissions']
     end
 
