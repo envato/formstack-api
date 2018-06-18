@@ -134,7 +134,7 @@ module Formstack
       raise 'The sort parameter must be ASC or DESC' unless sort == 'ASC' || sort == 'DESC'
 
 
-      end_point = "form/#{form_id}/submission.json"
+      end_point = "form/#{form_id}/data.json"
 
       sort.upcase!
 
