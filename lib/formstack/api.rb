@@ -155,8 +155,8 @@ module Formstack
       arguments = API.clean_arguments(arguments)
 
       search_fields.each_with_index do |field, idx|
-        arguments["search_field_#{idx}"] = search_field_ids[idx]
-        arguments["search_value_#{idx}"] = search_field_values[idx]
+        arguments["search_field_#{idx}"] = search_fields[idx]
+        arguments["search_value_#{idx}"] = search_fields_values[idx]
       end
 
       response = request(end_point, 'GET', { body: arguments })
