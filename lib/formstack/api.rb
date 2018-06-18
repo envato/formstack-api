@@ -54,7 +54,7 @@ module Formstack
 
       case verb
       when 'GET'
-        response = self.class.get(url, arguments )
+        response = self.class.get(url, arguments, :debug_output => $stdout )
       when 'POST'
         response = self.class.post(url, arguments )
       when 'PUT'
