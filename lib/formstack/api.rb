@@ -7,7 +7,7 @@ module Formstack
     require 'uri'
 
     include HTTParty
-    debug_output Rails.logger
+    logger Rails.logger, :debug
 
     FIELD_TYPES = [
       'text',
