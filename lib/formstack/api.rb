@@ -54,7 +54,7 @@ module Formstack
 
       case verb
       when 'GET'
-        response = self.class.get(url, arguments, :debug_output => $stdout )
+        response = self.class.get(url, arguments )
       when 'POST'
         response = self.class.post(url, arguments )
       when 'PUT'
@@ -160,7 +160,7 @@ module Formstack
         arguments["search_value_#{idx}"] = search_fields_values[idx]
       end
 
-      response = request(end_point, 'GET', arguments)
+      response = request(end_point, 'GET', {query: arguments} )
       response['submissions']
     end
 
